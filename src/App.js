@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import { BrowserRouter as Router, Switch } from "react-router-dom"
 import { userRoutes, authRoutes } from "./routes/allRoutes"
 import Authmiddleware from "./routes/Authmiddleware"
