@@ -3,7 +3,7 @@ import React from 'react'
 const Books = () => {
     return (
         <div>
-            <h1>Books</h1>
+            <h1 className="ml-5 mt-">Books</h1>
         </div>
     )
 }

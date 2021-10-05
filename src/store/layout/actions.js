@@ -1,4 +1,6 @@
-import { CHANGE_SIDEBAR_TYPE } from "./actionTypes"
+import { CHANGE_SIDEBAR_TYPE,
+  SHOW_SIDEBAR,
+  TOGGLE_LEFTMENU } from "./actionTypes"
 
   export const changeSidebarType = (sidebarType, isMobile) => {
     return {
@@ -6,4 +8,14 @@ import { CHANGE_SIDEBAR_TYPE } from "./actionTypes"
       payload: { sidebarType, isMobile },
     }
   }
+
+  export const showSidebar = isopen => ({
+    type: SHOW_SIDEBAR,
+    payload: isopen,
+  })
+  
+  export const toggleLeftmenu = isopen => ({
+    type: TOGGLE_LEFTMENU,
+    payload: isopen,
+  })
   

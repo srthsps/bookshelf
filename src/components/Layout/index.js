@@ -58,6 +58,14 @@ class Layout extends Component {
   }
 }
 
+Layout.propTypes = {
+  changeSidebarType: PropTypes.func,
+  children: PropTypes.object,
+  leftSideBarType: PropTypes.any,
+  location: PropTypes.object,
+}
+
+
 const mapStatetoProps = state => {
   return {
     ...state.Layout,

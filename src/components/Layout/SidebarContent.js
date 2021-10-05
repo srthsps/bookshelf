@@ -12,6 +12,7 @@ import { Link } from "react-router-dom"
 const SidebarContent = props => {
 
   const ref = useRef()
+  
   useEffect(() => {
     const pathName = props.location.pathname.substring(1)
 
@@ -32,7 +33,7 @@ const SidebarContent = props => {
       }
     }
     initMenu()
-  },[])
+  }, [])
 
   useEffect(() => {
     ref.current.recalculate()
@@ -98,7 +99,7 @@ const SidebarContent = props => {
               </Link>
             </li>
 
-            <li>
+            <li onClick={()=>console.log(props.layout)}>
               <Link to="/libraries" className="waves-effect">
                 <i className="ti-user"></i>
                 <span>Libraries</span>

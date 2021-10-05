@@ -1,5 +1,8 @@
+import PropTypes from 'prop-types'
 import { BrowserRouter as Router, Switch } from "react-router-dom"
 import { userRoutes, authRoutes } from "./routes/allRoutes"
+import { connect } from "react-redux"
+
 import Authmiddleware from "./routes/Authmiddleware"
 import Layout from './components/Layout/index'
 import NonAuthLayout from './components/NonAuthLayout/index'
@@ -36,4 +39,16 @@ function App() {
   );
 }
 
-export default App;
+App.propTypes = {
+  layout: PropTypes.any
+}
+
+const mapStateToProps = state => {
+  return {
+    layout: state.Layout,
+  }
+}
+
+
+export default connect(mapStateToProps, null)(App)
+

@@ -16,6 +16,8 @@ import { Link } from "react-router-dom"
 // Redux Store
 import {
   changeSidebarType,
+  toggleLeftmenu,
+  showSidebar
 } from "../../store/actions"
 
 const Header = props => {
@@ -30,7 +32,7 @@ const Header = props => {
     if (window.screen.width <= 992) {
       body.classList.toggle("sidebar-enable");
     } else {
-      body.classList.toggle("vertical-collpsed");
+      // body.classList.toggle("vertical-collpsed");
       body.classList.toggle("sidebar-enable");
     }
 }
@@ -43,11 +45,12 @@ const Header = props => {
             <div className="navbar-brand-box">
               <Link to="/" className="logo logo-dark">
                 <span className="logo-sm">
-                    Logo sm Image
+                  
+                    {/* Logo sm Image */}
                   {/* <img src={logosmImg} alt="" height="22" /> */}
                 </span>
                 <span className="logo-lg">
-                    Logo dark Image
+                <h1 style={{color:"teal"}} className="mt-3">BookShelf</h1>
                   {/* <img src={logodarkImg} alt="" height="45" /> */}
                 </span>
               </Link>
@@ -76,24 +79,7 @@ const Header = props => {
 
             <div className="d-none d-sm-flex">
 
-              {/* <Dropdown
-                isOpen={singlebtn}
-                toggle={() => setSinglebtn(!singlebtn)}
-                className="pt-3 d-inline-block"
-              >
-                <DropdownToggle className="btn btn-secondary">
-                  Create <i className="mdi mdi-chevron-down" />
-                </DropdownToggle>
-                <DropdownMenu>
-                  <DropdownItem>Action</DropdownItem>
-                  <DropdownItem>Another action</DropdownItem>
-                  <DropdownItem>Something else here</DropdownItem>
-                  <div className="dropdown-divider"></div>
-                  <DropdownItem>Separated link</DropdownItem>
-                </DropdownMenu>
-              </Dropdown> */}
-
-              <h4 className="align-self-center m-0">Rentpe B2B</h4>
+              {/* <h4 className="align-self-center m-0">BookShelf</h4> */}
 
             </div>
           </div>
@@ -117,12 +103,12 @@ const Header = props => {
               }}
               type="button"
             >
-              {/* <DropdownToggle
+              <DropdownToggle
                 className="btn header-item noti-icon waves-effect"
                 id="page-header-search-dropdown"
                 tag="button"
               > <i className="mdi mdi-magnify"></i>
-              </DropdownToggle> */}
+              </DropdownToggle>
               <DropdownMenu className="dropdown-menu-lg dropdown-menu-end p-0">
                 <Form className="p-3">
                   <div className="form-group m-0">
@@ -151,21 +137,22 @@ const Header = props => {
 
 Header.propTypes = {
   changeSidebarType: PropTypes.func,
-  leftMenu: PropTypes.any,
+  showSidebar: PropTypes.any,
   leftSideBarType: PropTypes.any,
-  showRightSidebar: PropTypes.any,
-  showRightSidebarAction: PropTypes.func,
-  t: PropTypes.any,
   toggleLeftmenu: PropTypes.func
 }
 
 const mapStatetoProps = state => {
   const {
     leftSideBarType,
+    showSidebar,
+    toggleLeftmenu
   } = state.Layout
-  return { leftSideBarType }
+  return { leftSideBarType,showSidebar,toggleLeftmenu }
 }
 
 export default connect(mapStatetoProps, {
-  changeSidebarType
+  changeSidebarType,
+  toggleLeftmenu,
+  showSidebar
 })(Header)
