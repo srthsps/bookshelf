@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
-import { connect } from "react-redux"
 import { withRouter } from "react-router-dom"
+import { connect } from "react-redux"
 
 import SidebarContent from "./SidebarContent"
 
@@ -21,9 +21,12 @@ Sidebar.propTypes = {
   type: PropTypes.string,
 }
 
-// const mapStatetoProps = state => {
-//   return {
-//     layout: state.Layout,
-//   }
-// }
-export default withRouter(Sidebar)
+const mapStatetoProps = state => {
+  return {
+    layout: state.Layout,
+  }
+}
+export default connect(
+  mapStatetoProps,
+  {}
+)(withRouter(Sidebar))

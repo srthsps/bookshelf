@@ -1,10 +1,8 @@
 import PropTypes from "prop-types"
 import React, { useEffect, useRef } from "react"
 
-// //Import Scrollbar
 import SimpleBar from "simplebar-react"
 
-// MetisMenu
 import MetisMenu from "metismenujs"
 import { withRouter } from "react-router-dom"
 import { Link } from "react-router-dom"
@@ -12,8 +10,8 @@ import { Link } from "react-router-dom"
 
 
 const SidebarContent = props => {
+
   const ref = useRef()
-  // Use ComponentDidMount and ComponentDidUpdate method symultaniously
   useEffect(() => {
     const pathName = props.location.pathname.substring(1)
 
@@ -34,7 +32,7 @@ const SidebarContent = props => {
       }
     }
     initMenu()
-  }, [])
+  },[])
 
   useEffect(() => {
     ref.current.recalculate()
@@ -101,43 +99,50 @@ const SidebarContent = props => {
             </li>
 
             <li>
-              <Link to="/tenants" className="waves-effect">
+              <Link to="/libraries" className="waves-effect">
                 <i className="ti-user"></i>
-                <span>Tenants</span>
+                <span>Libraries</span>
               </Link>
             </li>
 
             <li>
-              <Link to="/landlords" className="waves-effect">
+              <Link to="/books" className="waves-effect">
                 <i className="ti-wallet"></i>
-                <span>Landlords</span>
+                <span>Books</span>
               </Link>
             </li>
 
             <li>
-              <Link to="/property-units" className="waves-effect">
+              <Link to="/users" className="waves-effect">
                 <i className="ti-bag"></i>
-                <span>Property Units</span>
+                <span>Users</span>
               </Link>
             </li>
 
             <li>
+              <Link to="/contact" className="waves-effect">
+                <i className="ti-bookmark-alt"></i>
+                <span>Contact</span>
+              </Link>
+            </li>
+
+            {/* <li>
               <Link to="/#" className="has-arrow waves-effect">
                 <i className="ti-bookmark-alt"></i>
-                <span>Summary</span>
+                <span>Contact</span>
               </Link>
               <ul className="sub-menu" aria-expanded="false">
                 <li>
-                  <Link to="/summary">Summary</Link>
+                  <Link to="/contact">Contact</Link>
                 </li>
                 <li>
-                  <Link to="/transactions">Transactions </Link>
+                  <Link to="/books">Books </Link>
                 </li>
                 <li>
-                  <Link to="/settlements">Settlements </Link>
+                  <Link to="/users">Users </Link>
                 </li>
               </ul>
-            </li>
+            </li> */}
           </ul>
         </div>
       </SimpleBar>

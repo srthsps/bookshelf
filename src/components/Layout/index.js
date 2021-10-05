@@ -4,6 +4,10 @@ import React, { Component } from "react"
 import { connect } from "react-redux"
 import { withRouter } from "react-router-dom"
 
+import { changeSidebarType } from "../../store/actions"
+
+import Header from "./Header"
+
 import Sidebar from "./Sidebar"
 
 
@@ -19,6 +23,15 @@ class Layout extends Component {
   capitalizeFirstLetter = string => {
     return string.charAt(1).toUpperCase() + string.slice(2)
   }
+
+  componentDidMount() {
+
+    window.scrollTo(0, 0)
+
+    if (this.props.leftSideBarType) {
+      this.props.changeSidebarType(this.props.leftSideBarType)
+    }
+  }
   
   toggleMenuCallback = () => {
     if (this.props.leftSideBarType === "default") {
@@ -32,6 +45,7 @@ class Layout extends Component {
     return (
       <React.Fragment>
         <div id="layout-wrapper">
+        <Header toggleMenuCallback={this.toggleMenuCallback} />
           <Sidebar
             type={this.props.leftSideBarType}
             isMobile={this.state.isMobile}
@@ -44,14 +58,9 @@ class Layout extends Component {
   }
 }
 
-Layout.propTypes = {
-  leftSideBarType: PropTypes.any,
-  location: PropTypes.object,
+const mapStatetoProps = state => {
+  return {
+    ...state.Layout,
+  }
 }
-
-// const mapStatetoProps = state => {
-//   return {
-//     ...state.Layout,
-//   }
-// }
-export default withRouter(Layout)
+export default connect(mapStatetoProps, { changeSidebarType })(withRouter(Layout))
