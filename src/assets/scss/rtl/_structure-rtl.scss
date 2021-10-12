@@ -115,7 +115,7 @@
 
 .right-bar {
     float: left !important;
-    left: -($rightbar-width + 10px);
+    left: -calc($rightbar-width + 10px);
     right: auto;
 
     .user-box {
