@@ -8,6 +8,7 @@ import Layout from './components/Layout/index'
 import NonAuthLayout from './components/NonAuthLayout/index'
 
 import './assets/scss/theme.scss'
+import './assets/theme.css'
 
 function App() {
   return (
