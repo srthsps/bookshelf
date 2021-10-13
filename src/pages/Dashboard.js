@@ -42,13 +42,13 @@ const Dashboard = props => {
 
   return (
     <React.Fragment>
-      <div className="page-content">
+      <div className="page-content" style={{background:"#F5F5F5"}}>
         
 
         <Container fluid>
           <div className="page-title-box">
             <Row className="align-items-center">
-              <Col>
+              <Col className="py-3">
                 <h6 className="page-title">Dashboard</h6>
                 <ol className="breadcrumb m-0">
                   <li className="breadcrumb-item active">Welcome to Bookshelf</li>
@@ -108,7 +108,7 @@ const Dashboard = props => {
 
           <Row className="mt-5">
             <Col xl={8}>
-              <Card>
+              <Card className="shadow-sm" style={{border:"none"}}>
                 <CardBody>
                   <h4 className="card-title mb-4">Recent Rentals</h4>
                   <div className="table-responsive">
@@ -129,10 +129,6 @@ const Dashboard = props => {
                             <th scope="row">#{item.id}</th>
                             <td>
                               <div>
-                                {/* <img
-                                  src={item.icon} 
-                                  className="avatar-xs rounded-circle me-2"
-                                /> */}
                                 {item.book}
                               </div>
                             </td>
@@ -154,8 +150,8 @@ const Dashboard = props => {
               </Card>
             </Col>
 
-            <Col xl={4}>
-              <Card>
+            <Col xl={4} className="mt-md-0 mt-3">
+              <Card className="shadow-sm" style={{border:"none"}}>
                 <CardBody>
                   <h4 className="card-title mb-4">Activity</h4>
                   <ul className="activity-feed">

@@ -43,14 +43,14 @@ const Header = props => {
         <div className="navbar-header">
           <div className="d-flex">
             <div className="navbar-brand-box">
-              <Link to="/" className="logo logo-dark">
+              <Link to="/" className="logo logo-dark" style={{textDecoration:"none"}}>
                 <span className="logo-sm">
                   
                     {/* Logo sm Image */}
                   {/* <img src={logosmImg} alt="" height="22" /> */}
                 </span>
                 <span className="logo-lg">
-                <h1 style={{color:"teal"}} className="mt-3">BookShelf</h1>
+                <h1 style={{color:"teal"}} className="top-logo mt-3">BookShelf</h1>
                   {/* <img src={logodarkImg} alt="" height="45" /> */}
                 </span>
               </Link>

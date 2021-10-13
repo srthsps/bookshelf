@@ -93,35 +93,35 @@ const SidebarContent = props => {
           <ul className="metismenu list-unstyled" id="side-menu">
             <li className="menu-title">Main </li>
             <li>
-              <Link to="/dashboard" className="waves-effect">
+              <Link to="/dashboard" style={{textDecoration:"none"}} className="waves-effect">
                 <i className="ti-home"></i>
                 <span>Dashboard</span>
               </Link>
             </li>
 
             <li onClick={()=>console.log(props.layout)}>
-              <Link to="/libraries" className="waves-effect">
+              <Link to="/libraries" style={{textDecoration:"none"}} className="waves-effect">
                 <i className="ti-user"></i>
                 <span>Libraries</span>
               </Link>
             </li>
 
             <li>
-              <Link to="/books" className="waves-effect">
+              <Link to="/books" style={{textDecoration:"none"}} className="waves-effect">
                 <i className="ti-wallet"></i>
                 <span>Books</span>
               </Link>
             </li>
 
             <li>
-              <Link to="/users" className="waves-effect">
+              <Link to="/users" style={{textDecoration:"none"}} className="waves-effect">
                 <i className="ti-bag"></i>
                 <span>Users</span>
               </Link>
             </li>
 
             <li>
-              <Link to="/contact" className="waves-effect">
+              <Link to="/contact" style={{textDecoration:"none"}} className="waves-effect">
                 <i className="ti-bookmark-alt"></i>
                 <span>Contact</span>
               </Link>

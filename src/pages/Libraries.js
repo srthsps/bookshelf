@@ -9,7 +9,7 @@ const Libraries = () => {
           <div className="page-title-box">
             <Row className="align-items-center">
               <Col>
-                <h6 className="page-title">Libraries</h6>
+                <h6 className="page-title mt-3">Libraries</h6>
               </Col>
             </Row>
           </div>

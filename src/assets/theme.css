@@ -508,3 +508,12 @@ body[data-sidebar="light"] .mm-active .active i {
 body[data-sidebar="light"] .menu-title {
     color: #464b50 !important;
 }
+
+.card-title{
+    font-weight: 600;
+    color: #464b50;
+}
+
+.top-logo{
+    font-weight: 700;
+}

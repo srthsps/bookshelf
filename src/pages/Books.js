@@ -1,11 +1,22 @@
-import React from 'react'
+import React from "react";
+import { Container, Row, Col } from "reactstrap";
 
 const Books = () => {
-    return (
-        <div>
-            <h1 className="ml-5 mt-">Books</h1>
-        </div>
-    )
-}
+  return (
+    <React.Fragment>
+      <div className="page-content">
+        <Container fluid>
+          <div className="page-title-box">
+            <Row className="align-items-center">
+              <Col>
+                <h6 className="page-title mt-3">Books</h6>
+              </Col>
+            </Row>
+          </div>
+        </Container>
+      </div>
+    </React.Fragment>
+  );
+};
 
-export default Books
+export default Books;
