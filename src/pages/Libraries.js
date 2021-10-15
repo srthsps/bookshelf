@@ -5,8 +5,12 @@ import { useSelector } from "react-redux";
 
 import { MDBDataTable } from "mdbreact";
 import { Link } from "react-router-dom";
+import { useHistory } from 'react-router-dom'
 
 const Libraries = () => {
+
+  let history = useHistory()
+
   let libraryData = useSelector((state) => state.libraryReducer.libraryData);
 
   let tableData = {
@@ -32,13 +36,17 @@ const Libraries = () => {
 
   tableData.rows.forEach((row) => {
     row.view = (
-      <Link to={`/library/${row.bookshelfId}/dashboard/`}>
+      <Link to={`/libraries/${row.bookshelfId}/dashboard/`}>
         <Button color="secondary" outline>
           <i className="mdi mdi-eye pe-1" /> View
         </Button>
       </Link>
     );
   });
+
+  const addLibrary = () =>{
+    history.push('/libraries/add-library')
+  }
 
   return (
     <React.Fragment>
@@ -50,7 +58,7 @@ const Libraries = () => {
                 <h4 className="card-title ml-6 mt-4">Libraries</h4>
               </Col>
               <Col className="mr-6 mt-2">
-                <Button style={{background:"teal"}} className="mdi mdi-pen pr-3 float-end">Add Library</Button>
+                <Button style={{background:"teal"}} onClick={()=>addLibrary()} className="mdi mdi-pen pr-3 float-end">Add Library</Button>
               </Col>
             </Row>
             <Row className="mt-4">

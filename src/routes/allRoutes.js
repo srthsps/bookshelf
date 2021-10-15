@@ -17,10 +17,13 @@ import Login from '../pages/Login'
 
 import Register from '../pages/Register'
 
+import AddLibrary from '../pages/LibraryDashboard/AddLibrary'
+
 const userRoutes = [
 
     { path: '/dashboard', component: Dashboard },
     { path: '/libraries', component: Libraries },
+    { path: '/libraries/add-library', component: AddLibrary },
     { path: '/books', component: Books },
     { path: '/users', component: Users },
     { path: '/contact', component: Contact },
