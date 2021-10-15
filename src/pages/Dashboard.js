@@ -60,7 +60,7 @@ const Dashboard = props => {
                   <ButtonGroup>
                     {rangeValues.map((item, index) =>
                       <Button style={{color:"white", background:"teal"}} key={index} onClick={() => setActiveRange(index)}
-                        active={index == activeRange}>
+                        active={index === activeRange}>
                         {item}
                       </Button>)}
                   </ButtonGroup>
@@ -168,7 +168,7 @@ const Dashboard = props => {
                     )}
                   </ul>
                   <div className="text-center">
-                    <Link to="#" className="btn btn-primary">
+                    <Link to="#" className="btn" style={{background:'teal',color:'white'}}>
                       Load More
                     </Link>
                   </div>

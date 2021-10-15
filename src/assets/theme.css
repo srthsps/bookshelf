@@ -259,23 +259,23 @@
     font-weight: 500;
 }
 .mm-active {
-    color: #626ed4 !important;
+    color: teal !important;
 }
 .mm-active > a {
-    color: #626ed4 !important;
+    color: teal !important;
     background-color: #f5f5f5;
 }
 .mm-active > a i {
-    color: #626ed4 !important;
+    color: teal !important;
 }
 .mm-active .active {
-    color: #626ed4 !important;
+    color: teal !important;
 }
 .mm-active .active i {
-    color: #626ed4 !important;
+    color: teal !important;
 }
 .mm-active > i {
-    color: #626ed4 !important;
+    color: teal !important;
 }
 @media (max-width: 992px) {
     .vertical-menu {
@@ -346,12 +346,12 @@
 .vertical-collpsed .vertical-menu #sidebar-menu > ul > li:hover > a {
     position: relative;
     width: calc(190px + 70px);
-    color: #626ed4;
+    color: teal;
     background-color: #f5f5f5;
     transition: none;
 }
 .vertical-collpsed .vertical-menu #sidebar-menu > ul > li:hover > a i {
-    color: #626ed4;
+    color: teal;
 }
 .vertical-collpsed .vertical-menu #sidebar-menu > ul > li:hover > a span {
     display: inline;
@@ -451,7 +451,7 @@ body[data-sidebar="light"] #sidebar-menu ul li a:hover i {
     color: #0b0d0e;
 }
 body[data-sidebar="light"] #sidebar-menu ul li > .mm-active {
-    color: #626ed4 !important;
+    color: teal !important;
 }
 body[data-sidebar="light"] #sidebar-menu ul li > .mm-active > a {
     color: #fff !important;
@@ -487,23 +487,23 @@ body[data-sidebar="light"].vertical-collpsed .vertical-menu #sidebar-menu > ul u
     background-color: #fff;
 }
 body[data-sidebar="light"].vertical-collpsed .vertical-menu #sidebar-menu ul li.mm-active .active {
-    color: #626ed4;
+    color: teal;
 }
 body[data-sidebar="light"].vertical-collpsed .vertical-menu #sidebar-menu ul li.mm-active .active i {
-    color: #626ed4 !important;
+    color: teal !important;
 }
 body[data-sidebar="light"] .mm-active {
-    color: #626ed4 !important;
+    color: teal !important;
 }
 body[data-sidebar="light"] .mm-active > i {
-    color: #626ed4 !important;
+    color: teal !important;
 }
 body[data-sidebar="light"] .mm-active .active {
-    color: #626ed4 !important;
+    color: teal !important;
     background-color: #f5f5f5;
 }
 body[data-sidebar="light"] .mm-active .active i {
-    color: #626ed4 !important;
+    color: teal !important;
 }
 body[data-sidebar="light"] .menu-title {
     color: #464b50 !important;
