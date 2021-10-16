@@ -36,7 +36,7 @@ const Libraries = () => {
 
   tableData.rows.forEach((row) => {
     row.view = (
-      <Link to={`/libraries/${row.bookshelfId}/admin/`}>
+      <Link to={`/libraries/${row.bookshelfId}/admin/:active_tab`}>
         <Button color="secondary" outline>
           <i className="mdi mdi-eye pe-1" /> View
         </Button>

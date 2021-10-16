@@ -6,6 +6,7 @@ import { connect } from "react-redux"
 import SidebarContent from "./SidebarContent"
 
 const Sidebar = props => {
+
   return (
     <React.Fragment>
       <div className="vertical-menu">
