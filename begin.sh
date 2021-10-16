@@ -1,3 +1,3 @@
 #!/bin/bash
-cd /home/ubuntu/bookshelf
-# npm run build
+# cd /home/ubuntu/bookshelf
+echo "Starting deployment"
