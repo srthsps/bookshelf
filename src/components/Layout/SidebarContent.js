@@ -12,10 +12,15 @@ import { Link } from "react-router-dom"
 const SidebarContent = props => {
 
   const ref = useRef()
+
+  const tToggle = ()=>{
+    var body = document.body;
+    body.classList.toggle("sidebar-enable");
+  }
   
   useEffect(() => {
     const pathName = props.location.pathname.substring(1)
-
+    
     const initMenu = () => {
       new MetisMenu("#side-menu")
       let matchingMenuItem = null
@@ -23,8 +28,10 @@ const SidebarContent = props => {
       const items = ul.getElementsByTagName("a")
       for (let i = 0; i < items.length; ++i) {
         let itemSubPaths = items[i].pathname.split('/')
-        if (pathName.includes(itemSubPaths[itemSubPaths.length - 1])) {
+        let currentPathArray = pathName.split('/')
+        if (currentPathArray[0]===itemSubPaths[itemSubPaths.length - 1]) {
           matchingMenuItem = items[i]
+          
           break
         }
       }
@@ -37,6 +44,7 @@ const SidebarContent = props => {
 
   useEffect(() => {
     ref.current.recalculate()
+    
   })
 
   function scrollElement(item) {
@@ -49,12 +57,14 @@ const SidebarContent = props => {
   }
 
   function activateParentDropdown(item) {
+    tToggle()
     item.classList.add("active")
     const parent = item.parentElement
     const parent2El = parent.childNodes[1]
     if (parent2El && parent2El.id !== "side-menu") {
       parent2El.classList.add("mm-show")
     }
+    
 
     if (parent) {
       parent.classList.add("mm-active")
@@ -84,6 +94,7 @@ const SidebarContent = props => {
     }
     scrollElement(item);
     return false
+    
   }
 
   return (
@@ -91,7 +102,6 @@ const SidebarContent = props => {
       <SimpleBar style={{ maxHeight: "100%" }} ref={ref}>
         <div id="sidebar-menu">
           <ul className="metismenu list-unstyled" id="side-menu">
-            <li className="menu-title">Main </li>
             <li>
               <Link to="/dashboard" style={{textDecoration:"none"}} className="waves-effect">
                 <i className="ti-home"></i>
@@ -99,7 +109,7 @@ const SidebarContent = props => {
               </Link>
             </li>
 
-            <li onClick={()=>console.log(props.layout)}>
+            <li>
               <Link to="/libraries" style={{textDecoration:"none"}} className="waves-effect">
                 <i className="ti-user"></i>
                 <span>Libraries</span>

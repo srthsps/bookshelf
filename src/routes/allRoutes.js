@@ -19,10 +19,13 @@ import Register from '../pages/Register'
 
 import AddLibrary from '../pages/LibraryDashboard/AddLibrary'
 
+import LibAdmin from '../pages/LibraryDashboard/LibAdmin'
+
 const userRoutes = [
 
     { path: '/dashboard', component: Dashboard },
     { path: '/libraries', component: Libraries },
+    { path: '/libraries/:libraryID/admin/:active_tab', component: LibAdmin },
     { path: '/libraries/add-library', component: AddLibrary },
     { path: '/books', component: Books },
     { path: '/users', component: Users },
