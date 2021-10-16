@@ -1,7 +1,9 @@
 import { libraryData } from './states/libraryData'
+import { bookData } from './states/bookData'
 
 const INIT_STATE = {
-    libraryData
+    libraryData,
+    bookData
 }
 
 const libraryReducer = (state= INIT_STATE) =>{
