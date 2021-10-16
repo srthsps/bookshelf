@@ -1,3 +1,3 @@
 #!/bin/bash
-cd /home/ubuntu/realbuy
+cd /home/ubuntu/bookshelf
 # npm run build

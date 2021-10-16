@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /home/ubuntu/realbuy
-mkdir /var/www/realbuy
-cp -r build/* /var/www/realbuy
+cd /home/ubuntu/bookshelf
+mkdir /var/www/bookshelf
+cp -r build/* /var/www/bookshelf
 systemctl restart nginx
