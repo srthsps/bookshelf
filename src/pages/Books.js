@@ -9,7 +9,7 @@ const Books = () => {
           <div className="page-title-box">
             <Row className="align-items-center">
               <Col>
-                <h6 className="page-title mt-3">Bookss</h6>
+                <h6 className="page-title mt-3">Books</h6>
               </Col>
             </Row>
           </div>
