@@ -23,7 +23,7 @@ const SidebarContent = props => {
       const items = ul.getElementsByTagName("a")
       for (let i = 0; i < items.length; ++i) {
         let itemSubPaths = items[i].pathname.split('/')
-        if (pathName === itemSubPaths[itemSubPaths.length - 1]) {
+        if (pathName.includes(itemSubPaths[itemSubPaths.length - 1])) {
           matchingMenuItem = items[i]
           break
         }
