@@ -111,28 +111,28 @@ const SidebarContent = props => {
 
             <li>
               <Link to="/libraries" style={{textDecoration:"none"}} className="waves-effect">
-                <i className="ti-user"></i>
+                <i className="ti-archive"></i>
                 <span>Libraries</span>
               </Link>
             </li>
 
             <li>
               <Link to="/books" style={{textDecoration:"none"}} className="waves-effect">
-                <i className="ti-wallet"></i>
+                <i className="ti-book"></i>
                 <span>Books</span>
               </Link>
             </li>
 
             <li>
               <Link to="/users" style={{textDecoration:"none"}} className="waves-effect">
-                <i className="ti-bag"></i>
+                <i className="ti-user"></i>
                 <span>Users</span>
               </Link>
             </li>
 
             <li>
               <Link to="/contact" style={{textDecoration:"none"}} className="waves-effect">
-                <i className="ti-bookmark-alt"></i>
+                <i className="ti-email"></i>
                 <span>Contact</span>
               </Link>
             </li>
