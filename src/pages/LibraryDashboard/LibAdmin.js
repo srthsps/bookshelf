@@ -58,7 +58,7 @@ const TenantDashboard = (props) => {
                 {tabs.map((tab) => (
                   <NavItem key={tab.title}>
                     <NavLink
-                      style={{color:"teal"}}
+                      style={active_tab !== tab.route ? {color:"teal"} : { }}
                       className={active_tab === tab.route ? "active" : ""}
                       onClick={() => {
                         toggle(tab.route);

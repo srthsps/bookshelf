@@ -5,11 +5,10 @@ import { useSelector } from "react-redux";
 
 import { MDBDataTable } from "mdbreact";
 import { Link } from "react-router-dom";
-import { useHistory } from 'react-router-dom'
+import { useHistory } from "react-router-dom";
 
 const Libraries = () => {
-
-  let history = useHistory()
+  let history = useHistory();
 
   let libraryData = useSelector((state) => state.libraryReducer.libraryData);
 
@@ -36,17 +35,33 @@ const Libraries = () => {
 
   tableData.rows.forEach((row) => {
     row.view = (
-      <Link to={`/libraries/${row.bookshelfId}/admin/:active_tab`}>
-        <Button color="secondary" outline>
-          <i className="mdi mdi-eye pe-1" /> View
-        </Button>
-      </Link>
+      <Row className="d-inline-flex">
+        <Col lg>
+          <Link to={`/libraries/${row.bookshelfId}/admin/:active_tab`}>
+            <Button color="primary" outline>
+              <i className="mdi mdi-eye pe-1" />
+            </Button>
+          </Link>
+        </Col>
+        <Col lg>
+          <Link to={`/libraries/${row.bookshelfId}/edit`}>
+            <Button color="secondary" outline>
+              <i className="mdi mdi-pen pe-1" />
+            </Button>
+          </Link>
+        </Col>
+        <Col lg>
+          <Button color="danger" outline>
+            <i className="mdi mdi-delete pe-1" />
+          </Button>
+        </Col>
+      </Row>
     );
   });
 
-  const addLibrary = () =>{
-    history.push('/libraries/add-library')
-  }
+  const addLibrary = () => {
+    history.push("/libraries/add-library");
+  };
 
   return (
     <React.Fragment>
@@ -58,7 +73,13 @@ const Libraries = () => {
                 <h4 className="card-title ml-6 mt-4">Libraries</h4>
               </Col>
               <Col className="mr-6 mt-2">
-                <Button style={{background:"teal"}} onClick={()=>addLibrary()} className="mdi mdi-pen pr-3 float-end">Add Library</Button>
+                <Button
+                  style={{ background: "teal" }}
+                  onClick={() => addLibrary()}
+                  className="mdi mdi-pen pr-3 float-end"
+                >
+                  Add Library
+                </Button>
               </Col>
             </Row>
             <Row className="mt-4">
@@ -124,7 +145,10 @@ const Libraries = () => {
                           </div>
                         </Col>
                         <Col className="col-md-3 col-12">
-                          <Button className="col-12" style={{background:'teal'}}>
+                          <Button
+                            className="col-12"
+                            style={{ background: "teal" }}
+                          >
                             Search
                           </Button>
                         </Col>
