@@ -25,7 +25,7 @@ const userRoutes = [
 
     { path: '/dashboard', component: Dashboard },
     { path: '/libraries', component: Libraries },
-    { path: '/libraries/:libraryID/admin/:active_tab', component: LibAdmin },
+    { path: '/libraries/:libraryID/admin/', component: LibAdmin },
     { path: '/libraries/add-library', component: AddLibrary },
     { path: '/books', component: Books },
     { path: '/users', component: Users },

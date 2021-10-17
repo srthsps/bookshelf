@@ -39,7 +39,7 @@ const Libraries = () => {
     row.view = (
       <Row className="d-inline-flex">
         <Col lg>
-          <Link to={`/libraries/${row.bookshelfId}/admin/:active_tab`}>
+          <Link to={`libraries/${row.bookshelfId}/admin`}>
             <Button color="primary" outline>
               <i className="mdi mdi-eye pe-1" />
             </Button>

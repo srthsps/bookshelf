@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import classnames from "classnames"
 import {
   Container,
   Row,
@@ -18,31 +19,18 @@ import Employees from "./Employees";
 import Members from "./Members";
 
 const TenantDashboard = (props) => {
-  /* {props.match.params.tenantID} */
 
-  const tabs = [
-    { title: "Profile", route: "profile", content: <Profile /> },
-    { title: "Books", route: "books", content: <Books /> },
-    { title: "Employees", route: "employees", content: <Employees /> },
-    { title: "Members", route: "members", content: <Members /> },
-  ];
+  let [activeTab, setActiveTab] = useState(0)
 
-  let { active_tab } = useParams();
+  console.log(activeTab);
 
-  const history = useHistory();
-
-  useEffect(() => {
-    const defaultTab = tabs[0].route;
-    if (!active_tab || !tabs.find((tab) => tab.route === active_tab)) {
-      history.replace(`./${defaultTab}`);
+  let toggle = tab => {
+    if (activeTab !== tab) {
+      setActiveTab(tab)
     }
-  }, []);
+  }
 
-  const toggle = (tabRoute) => {
-    if (active_tab !== tabRoute) {
-      history.push(`./${tabRoute}`);
-    }
-  };
+  const tabs = ["Profile", "Books", "Librarian", "Members"];
 
   return (
     <>
@@ -55,28 +43,34 @@ const TenantDashboard = (props) => {
             
             <Col>
               <Nav tabs>
-                {tabs.map((tab) => (
-                  <NavItem key={tab.title}>
-                    <NavLink
-                      style={active_tab !== tab.route ? {color:"teal"} : { }}
-                      className={active_tab === tab.route ? "active" : ""}
-                      onClick={() => {
-                        toggle(tab.route);
-                      }}
-                      role="button"
-                    >
-                      {tab.title}
-                    </NavLink>
-                  </NavItem>
-                ))}
-              </Nav>
-              <TabContent activeTab={active_tab}>
-                {tabs.map((tab) => (
-                  <TabPane key={tab.title} tabId={tab.route}>
-                    {tab.content}
-                  </TabPane>
-                ))}
-              </TabContent>
+              {tabs.map((tab, index) =>
+                <NavItem key={index}>
+                  <NavLink
+                  style={activeTab !== index ? {color:"teal",cursor:"pointer"} : {}}
+                    className={classnames({
+                      active: activeTab === index,
+                    })}
+                    onClick={() => toggle(index)}
+                  >
+                    {tab}
+                  </NavLink>
+                </NavItem>
+              )}
+            </Nav>
+              <TabContent activeTab={activeTab} className="bg-white text-muted">
+              <TabPane tabId={0}>
+                <Profile />
+              </TabPane>
+              <TabPane tabId={1}>
+                <Books />
+              </TabPane>
+              <TabPane tabId={2}>
+                <Employees />
+              </TabPane>
+              <TabPane tabId={3}>
+                <Members />
+              </TabPane>
+            </TabContent>
             </Col>
           </Row>
         </Container>

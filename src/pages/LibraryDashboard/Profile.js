@@ -26,6 +26,8 @@ const Profile = () => {
     changeCurrentLibrary(data);
   }, []);
 
+  console.log("guys")
+
   return (
     <React.Fragment>
       <div className="page-content bg-white">
