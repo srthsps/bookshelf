@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
 
-const D = () => {
+const Employees = () => {
   return (
     <React.Fragment>
       <div className="page-content">
@@ -9,7 +9,7 @@ const D = () => {
           <div className="page-title-box">
             <Row className="align-items-center">
               <Col>
-                <h6 className="page-title mt-3">D</h6>
+                <h6 className="page-title mt-3">Employees</h6>
               </Col>
             </Row>
           </div>
@@ -19,4 +19,4 @@ const D = () => {
   );
 };
 
-export default D;
+export default Employees;

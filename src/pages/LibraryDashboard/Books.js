@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
 
-const A = () => {
+const Books = () => {
   return (
     <React.Fragment>
       <div className="page-content bg-white">
@@ -9,7 +9,7 @@ const A = () => {
           <div className="page-title-box">
             <Row className="align-items-center">
               <Col>
-                <h6 className="page-title mt-3">A</h6>
+                <h6 className="page-title mt-3">Books</h6>
               </Col>
             </Row>
           </div>
@@ -19,4 +19,4 @@ const A = () => {
   );
 };
 
-export default A;
+export default Books;

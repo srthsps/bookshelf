@@ -12,19 +12,19 @@ import {
 
 import { useParams, useHistory } from "react-router-dom";
 
-import A from "./A";
-import B from "./B";
-import C from "./C";
-import D from "./D";
+import Profile from "./Profile";
+import Books from "./Books";
+import Employees from "./Employees";
+import Members from "./Members";
 
 const TenantDashboard = (props) => {
   /* {props.match.params.tenantID} */
 
   const tabs = [
-    { title: "Profile", route: "profile", content: <A /> },
-    { title: "Books", route: "books", content: <B /> },
-    { title: "Employees", route: "employees", content: <C /> },
-    { title: "Members", route: "members", content: <D /> },
+    { title: "Profile", route: "profile", content: <Profile /> },
+    { title: "Books", route: "books", content: <Books /> },
+    { title: "Employees", route: "employees", content: <Employees /> },
+    { title: "Members", route: "members", content: <Members /> },
   ];
 
   let { active_tab } = useParams();
@@ -49,7 +49,7 @@ const TenantDashboard = (props) => {
       <div className="page-content" style={{ background: "#F5F5F5" }}>
         <Container fluid className="mt-5">
           <Col>
-              <h4 className="card-title ml-6 mb-4 mt-4">Library Dashboard</h4>
+              {/* <h4 className="card-title ml-6 mb-4 mt-4">Library Dashboard</h4> */}
             </Col>
           <Row>
             

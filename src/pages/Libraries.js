@@ -1,6 +1,8 @@
 import React from "react";
 import { Container, Row, Col, Card, CardBody, Button } from "reactstrap";
 
+import { TextField } from "@mui/material";
+
 import { useSelector } from "react-redux";
 
 import { MDBDataTable } from "mdbreact";
@@ -90,57 +92,75 @@ const Libraries = () => {
                       <Row>
                         <Col className="col-md col-12 mb-md-0 mb-3">
                           <div className="col-md">
-                            <input
-                              className="form-control"
+                            <TextField
+                            fullWidth
+                              id="standard-basic"
                               placeholder="Bookshelf ID"
+                              label="Bookshelf ID"
+                              variant="standard"
                             />
                           </div>
                         </Col>
                         <Col className="col-md col-12 mb-md-0 mb-3">
                           <div className="col-md">
-                            <input
-                              className="form-control"
+                            <TextField
+                            fullWidth
+                              id="standard-basic"
                               placeholder="Library Name"
+                              label="Library Name"
+                              variant="standard"
                             />
                           </div>
                         </Col>
                         <Col className="col-md col-12 mb-md-0 mb-3">
                           <div className="col-md">
-                            <select className="form-control">
-                              <option selected disabled>
-                                Select State
-                              </option>
+                            <TextField
+                            fullWidth
+                              id="standard-select-currency"
+                              select
+                              label="Select state"
+                              variant="standard"
+                            >
                               <option>Kerala</option>
                               <option>Tamil Nadu</option>
-                            </select>
+                            </TextField>
                           </div>
                         </Col>
                       </Row>
                       <Row className="mb-4 mt-4">
                         <Col className="col-md-3 col-12 mb-md-0 mb-3">
                           <div className="col-md">
-                            <select className="form-control">
-                              <option selected disabled>
-                                Select District
-                              </option>
+                          <TextField
+                            fullWidth
+                              id="standard-select-currency"
+                              select
+                              label="Select district"
+                              variant="standard"
+                            >
                               <option>Ernakulam</option>
                               <option>Kottayam</option>
-                            </select>
+                            </TextField>
                           </div>
                         </Col>
                         <Col className="col-md col-12 mb-md-0 mb-3">
                           <div className="col-md">
-                            <input
-                              className="form-control"
+                          <TextField
+                            fullWidth
+                              id="standard-basic"
                               placeholder="Librarian"
+                              label="Librarian"
+                              variant="standard"
                             />
                           </div>
                         </Col>
                         <Col className="col-md col-12 mb-md-0 mb-3">
                           <div className="col-md">
-                            <input
-                              className="form-control"
+                          <TextField
+                            fullWidth
+                              id="standard-basic"
                               placeholder="Contact Number"
+                              label="Contact Number"
+                              variant="standard"
                             />
                           </div>
                         </Col>

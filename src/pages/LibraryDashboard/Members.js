@@ -1,15 +1,15 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
 
-const B = () => {
+const Members = () => {
   return (
     <React.Fragment>
-      <div className="page-content bg-white">
+      <div className="page-content">
         <Container fluid>
           <div className="page-title-box">
             <Row className="align-items-center">
               <Col>
-                <h6 className="page-title mt-3">B</h6>
+                <h6 className="page-title mt-3">Members</h6>
               </Col>
             </Row>
           </div>
@@ -19,4 +19,4 @@ const B = () => {
   );
 };
 
-export default B;
+export default Members;
