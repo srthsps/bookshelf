@@ -49,7 +49,7 @@ const Employees = () => {
               </Col>
             </Row>
           </Card>
-          <Card className="shadow mt-4">
+          <Card className="shadow mt-4 pb-4">
             <CardHeader>
               <h6 className="text-muted text-center">Basic Information</h6>
             </CardHeader>
