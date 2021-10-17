@@ -57,7 +57,6 @@ const SidebarContent = props => {
   }
 
   function activateParentDropdown(item) {
-    tToggle()
     item.classList.add("active")
     const parent = item.parentElement
     const parent2El = parent.childNodes[1]
